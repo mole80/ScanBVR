@@ -39,9 +39,9 @@ public class VisorView extends View {
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(Color.GREEN);
         paint.setStrokeWidth(3);
-        RectLeft = 20;
+        RectLeft = 5;
         RectTop = 80 ;
-        RectRight = mesW - 20 - RectLeft;
+        RectRight = mesW - 5 - RectLeft;
         RectBottom = RectTop + 40;
         Rect rec=new Rect((int) RectLeft,(int)RectTop,(int)RectRight,(int)RectBottom);
         canvas.drawRect(rec,paint);

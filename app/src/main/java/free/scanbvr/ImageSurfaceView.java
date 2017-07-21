@@ -64,7 +64,13 @@ public class ImageSurfaceView extends SurfaceView implements SurfaceHolder.Callb
             String mode = param.getFocusMode();
             List<String> lm = param.getSupportedFocusModes();
             param.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
-            param.setFlashMode( Camera.Parameters.FLASH_MODE_ON );
+            param.setFlashMode( Camera.Parameters.FLASH_MODE_OFF );
+
+            int minEx = param.getMinExposureCompensation();
+            int maxEx = param.getMaxExposureCompensation();
+            int Ex = param.getExposureCompensation();
+
+            param.setExposureCompensation(2);
 
             param.setPreviewSize(size.width, size.height);
             camera.setParameters(param);
